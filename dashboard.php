@@ -61,7 +61,7 @@ if (isset($_GET["logout"])) {
 <body>
 
   <form method="POST">
-    <input type="text" name="firstname" placeholder="First Name" value="<?php isset($_POST['firstname']) ? $_POST['firstname'] : ''; ?>" />echo
+    <input type="text" name="firstname" placeholder="First Name" value="<?php isset($_POST['firstname']) ? $_POST['firstname'] : ''; ?>" />
     <input type="text" name="lastname" id="" placeholder="Last Name" value="<?php echo isset($_POST['lastname']) ? $_POST['lastname'] : ''; ?>" />
     <input type="text" name="address" id="" placeholder="Address" value="<?php echo isset($_POST['address']) ? $_POST['address'] : ''; ?>" />
     <input type="text" name="contact" id="" placeholder="Contact Number" value="<?php echo isset($_POST['contact']) ? $_POST['contact'] : ''; ?>" />
@@ -81,8 +81,8 @@ if (isset($_GET["logout"])) {
     </select>
 
     <select name="department">
+      <option value="Department">Department</option>
       <?php foreach ($departments as $department) { ?>
-        <option value="Department">Department</option>
         <option value="<?= $department["department_name"] ?>" <?php echo isset($_POST['department']) && $_POST['department'] == $department["department_name"] ? 'selected' : ''; ?>><?php echo $department["department_name"] ?></option>
       <?php } ?>
     </select>
